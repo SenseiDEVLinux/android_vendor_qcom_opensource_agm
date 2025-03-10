@@ -30,10 +30,10 @@ LOCAL_SHARED_LIBRARIES := \
 
 include $(BUILD_SHARED_LIBRARY)
 
+endif
+
 ifeq ($(strip $(AUDIO_FEATURE_ENABLED_AGM_HIDL)),true)
   LOCAL_CFLAGS += -DAGM_HIDL_ENABLED
-
-endif
 
 ifneq ($(strip $(AUDIO_FEATURE_ENABLED_AGM_HIDL)),true)
 include $(CLEAR_VARS)
